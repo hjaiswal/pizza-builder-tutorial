@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Pizza.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Base from "../base/Base";
 import Tomato from "../tomato/Tomato";
 import Mushroom from "../mushroom/Mushroom";

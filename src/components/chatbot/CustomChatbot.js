@@ -45,7 +45,11 @@ function CustomChatbot(props) {
     {
       id: "Displaying options to eat",
       options: [
-        { value: "pizza", label: "Pizza", trigger: "Pizza Tomatoes" },
+        {
+          value: "pizza",
+          label: "Pizza",
+          trigger: "Asking for Tomatoes in Pizza"
+        },
         { value: "burger", label: "Burger", trigger: "Burger Not available" }
       ]
     },
@@ -58,79 +62,79 @@ function CustomChatbot(props) {
     {
       id: "Asking for pizza after burger",
       options: [
-        { value: true, label: "Yes", trigger: "Pizza Tomatoes" },
+        { value: true, label: "Yes", trigger: "Asking for Tomatoes in Pizza" },
         { value: false, label: "No", trigger: "Done" }
       ]
     },
     {
-      id: "Pizza Tomatoes",
+      id: "Asking for Tomatoes in Pizza",
       message: "Would you like to have tomatoes in your pizza",
-      trigger: "Pizza Tomatoes Set"
+      trigger: "Adding Tomatoes in Pizza"
     },
     {
-      id: "Pizza Tomatoes Set",
+      id: "Adding Tomatoes in Pizza",
       options: [
         {
           value: true,
           label: "Yes",
           trigger: () => {
             props.eventHandler("tomato");
-            return "Pizza Mushroom";
+            return "Asking for Mushroom in Pizza";
           }
         },
-        { value: false, label: "No", trigger: "Pizza Mushroom" }
+        { value: false, label: "No", trigger: "Asking for Mushroom in Pizza" }
       ]
     },
 
     {
-      id: "Pizza Mushroom",
+      id: "Asking for Mushroom in Pizza",
       message: "Would you like to have mushroom in your pizza",
-      trigger: "Pizza Mushroom Set"
+      trigger: "Adding Mushroom in Pizza"
     },
 
     {
-      id: "Pizza Mushroom Set",
+      id: "Adding Mushroom in Pizza",
       options: [
         {
           value: true,
           label: "Yes",
           trigger: () => {
             props.eventHandler("mushroom");
-            return "Pizza Corn";
+            return "Asking for Corn in Pizza";
           }
         },
-        { value: false, label: "No", trigger: "Pizza Corn" }
+        { value: false, label: "No", trigger: "Asking for Corn in Pizza" }
       ]
     },
     {
-      id: "Pizza Corn",
+      id: "Asking for Corn in Pizza",
       message: "Would you like to have corn in your pizza",
-      trigger: "Pizza Corn Set"
+      trigger: "Adding Corn in Pizza"
     },
 
     {
-      id: "Pizza Corn Set",
+      id: "Adding Corn in Pizza",
       options: [
         {
           value: true,
           label: "Yes",
           trigger: () => {
             props.eventHandler("corn");
-            return "Pizza Veggie";
+            return "Asking for Veggies in Pizza";
           }
         },
-        { value: false, label: "No", trigger: "Pizza Veggie" }
+        { value: false, label: "No", trigger: "Asking for Veggies in Pizza" }
       ]
     },
 
     {
-      id: "Pizza Veggie",
+      id: "Asking for Veggies in Pizza",
       message: "Would you like to have veggies in your pizza",
-      trigger: "Pizza Veggie Set"
+      trigger: "Adding Veggies in Pizza"
     },
 
     {
-      id: "Pizza Veggie Set",
+      id: "Adding Veggies in Pizza",
       options: [
         {
           value: true,
